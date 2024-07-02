@@ -28,6 +28,7 @@ app.use('/product',product)
 app.use('/email',email)
 app.use('/auth',auth)
 app.get('/',(req,res)=>{
+    console.log('request recieved')
     res.send('hello')
 })
 
@@ -38,7 +39,7 @@ async function serverstart(){
     https.createServer({
         key:fs.readFileSync('./key.pem'),
         cert:fs.readFileSync('./cert.pem')
-    },app).listen(3000,()=>{
+    },app).listen(9050,()=>{
         console.log('server is listening....')
     })
     
