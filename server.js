@@ -39,7 +39,7 @@ async function serverstart(){
     https.createServer({
         key:fs.readFileSync('./key.pem'),
         cert:fs.readFileSync('./cert.pem')
-    },app).listen(9050,()=>{
+    },app).listen(3000,()=>{
         console.log('server is listening....')
     })
     
